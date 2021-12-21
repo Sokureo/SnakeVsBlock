@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
         {
 
             Vector3 delta = Input.mousePosition - _previousMousePosition;
-            delta = delta.normalized * Speed * Time.deltaTime * 5;
+            delta = delta.normalized * Speed * Time.deltaTime;
             Vector3 newPosition = new Vector3(transform.position.x + delta.x, transform.position.y, transform.position.z + tempVect.z);
             componentRigidbody.MovePosition(newPosition);
         }
